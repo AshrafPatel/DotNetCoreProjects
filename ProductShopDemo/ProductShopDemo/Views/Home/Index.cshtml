@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<h1>Home</h1>
+<div class="list-group">
+    <!--route-slug because controller input uses slug var name -->
+    <a asp-controller="Product" asp-action="Details" asp-route-slug="Product-Of-The-Week">View Product Of The Week</a>
+    <a asp-controller="Product" asp-action="List">View Products</a>
+    <a asp-controller="Home" asp-action="About">About Us</a>
+</div>

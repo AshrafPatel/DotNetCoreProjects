@@ -20,5 +20,12 @@ namespace SongList.Models
         [Required(ErrorMessage ="Please enter the rating")]
         [Range(1, 5, ErrorMessage = "Please enter a rating between 1 and 5")]
         public int? Rating { get; set; }
+
+        [Required(ErrorMessage = "Please enter a genre")]
+        [Range(1, 4, ErrorMessage = "Please select a genre")]
+        public byte GenreId { get; set; }
+        public Genre Genre { get; set; }
+
+        public string Slug => Name?.Replace(' ', '-').ToLower() + '-' + Year?.ToString();
     }
 }

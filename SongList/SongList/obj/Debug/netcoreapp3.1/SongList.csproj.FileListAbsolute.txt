@@ -9,7 +9,6 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\n
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\SongList.pdb
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\SongList.Views.dll
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\SongList.Views.pdb
-C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\SongList.csprojAssemblyReference.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\SongList.AssemblyInfoInputs.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\SongList.AssemblyInfo.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\SongList.RazorAssemblyInfo.cache
@@ -72,3 +71,10 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\n
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Language.Intellisense.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\SongList.csproj.CoreCompileInputs.cache
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\SongList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\Razor\Views\Song\Delete.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\SongList\SongList\obj\Debug\netcoreapp3.1\Razor\Views\Song\Edit.cshtml.g.cs

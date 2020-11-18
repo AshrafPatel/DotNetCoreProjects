@@ -24,6 +24,11 @@ namespace SongList
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRouting(option =>
+            {
+                option.LowercaseUrls = true;
+                option.AppendTrailingSlash = true;
+            });
             services.AddControllersWithViews();
             services.AddDbContext<SongContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("SongContext"))
@@ -49,7 +54,8 @@ namespace SongList
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}"
+                );
             });
         }
     }

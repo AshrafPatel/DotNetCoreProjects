@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SongList.Models;
 
@@ -11,9 +12,16 @@ namespace SongList.Controllers
 {
     public class HomeController : Controller
     {
+        private SongContext _context { get; set; }
+
+        public HomeController(SongContext songContext)
+        {
+            _context = songContext;
+        }
         public IActionResult Index()
         {
-            return View();
+            var songs = _context.Songs.Include(m => m.Genre).ToList();
+            return View(songs);
         }
 
         

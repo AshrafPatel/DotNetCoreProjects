@@ -4,23 +4,47 @@
 }
 
 <h1>Product List</h1>
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach(var product in @Model)
-    {
-      <tr>
-        <td>@product.Name</td>
-        <td>@($"{product.Price:C}")</td>
-        <td><a asp-controller="Product" asp-action="Detail" asp-route-slugLink="@product.Slug">View</a></td>
-      </tr>
-    }
-  </tbody>
-</table>
+<div class="row">
+    <div class="col-sm-2">
+        <div class="list-group">
+            <a asp-controller="Product" asp-action="List" asp-route-id="All" 
+               class="list-group-item @(ViewBag.Categories == "All" ? "active" : "")">All Categories</a>
+            @foreach (Category category in ViewBag.Categories) 
+            { 
+                <a asp-controller="Product" asp-action="List" asp-route-id="@category.Name" 
+                   class="list-group-item @(ViewBag.Categories == category.Name ? "active" : "")">
+                    @category.Name
+                </a>
+            }
+        </div>
+    </div>
+
+    <div class="col-sm-10">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in @Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Price.</td>
+                        <td>
+                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.ProductID" asp-route-slug="@product.Slug">View Details</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.ProductID">Add To Cart</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>

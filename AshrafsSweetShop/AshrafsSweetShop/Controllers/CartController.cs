@@ -23,7 +23,8 @@ namespace AshrafsSweetShop.Controllers
 
         public IActionResult Add(int id)
         {
-            ViewBag.Id = id;
+            var products = _context.Products.Find(id);
+            ViewBag.Name = products.Name;
             return View();
         }
     }

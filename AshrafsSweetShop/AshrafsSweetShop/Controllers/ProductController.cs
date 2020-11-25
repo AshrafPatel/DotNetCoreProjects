@@ -23,7 +23,7 @@ namespace AshrafsSweetShop.Controllers
         }
         public IActionResult Detail(int id)
         {
-            var product = _context.Products.Include(c => c.Category).SingleOrDefault(p => p.ProductID == id);
+            var product = _context.Products.Include(p => p.Category).FirstOrDefault(c => c.ProductID == id);
             ViewBag.Image = product.Code + "-m.jpg";
             return View(product);
         }
@@ -32,6 +32,7 @@ namespace AshrafsSweetShop.Controllers
         public IActionResult List(string id = "All")
         {
             var categories = _context.Categories.OrderBy(c => c.Name).ToList();
+            ViewBag.Categories = categories;
             List<Product> products;
 
             if (id == "All")

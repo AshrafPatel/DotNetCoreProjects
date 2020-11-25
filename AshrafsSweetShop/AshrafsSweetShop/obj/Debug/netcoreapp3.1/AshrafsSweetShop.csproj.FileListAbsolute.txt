@@ -113,3 +113,5 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweet
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\AshrafsSweetShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Add.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs

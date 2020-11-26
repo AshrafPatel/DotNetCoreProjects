@@ -33,6 +33,7 @@ namespace AshrafsSweetShop.Controllers
         {
             var categories = _context.Categories.OrderBy(c => c.Name).ToList();
             ViewBag.Categories = categories;
+            ViewBag.SelectedCategory = id;
             List<Product> products;
 
             if (id == "All")

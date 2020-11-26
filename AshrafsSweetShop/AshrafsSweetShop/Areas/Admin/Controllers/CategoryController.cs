@@ -24,7 +24,7 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
         [Route("[area]/Categories/{id?}")]
         public IActionResult List()
         {
-            var categories = _context.Categories.OrderBy(c => c.Name).ToList();
+            var categories = _context.Categories.OrderBy(c => c.CategoryId).ToList();
             return View(categories);
         }
 
@@ -33,6 +33,52 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
         {
             ViewBag.Action = "Add";
             return View("AddUpdate", new Category());
+        }
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            ViewBag.Action = "Update";
+            var category = _context.Categories.Find(id);
+            return View("AddUpdate", category);
+        }
+
+        [HttpPost]
+        public IActionResult Save(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                if (category.CategoryId == 0)
+                {
+                    _context.Categories.Add(category);
+                }
+                else
+                {
+                    _context.Categories.Update(category);
+                }
+                _context.SaveChanges();
+                return RedirectToAction("List", "Category");
+            }
+            else
+            {
+                ViewBag.Action = "Save";
+                return View("AddUpdate", category);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var category = _context.Categories.Find(id);
+            return View(category);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Category category)
+        {
+            _context.Categories.Remove(category);
+            _context.SaveChanges();
+            return RedirectToAction("List", "Category");
         }
     }
 }

@@ -36,7 +36,7 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Update(int id)
+        public IActionResult Save(int id)
         {
             ViewBag.Action = "Update";
             var category = _context.Categories.Find(id);
@@ -44,7 +44,7 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Save(Category category)
+        public IActionResult Update(Category category)
         {
             if (ModelState.IsValid)
             {

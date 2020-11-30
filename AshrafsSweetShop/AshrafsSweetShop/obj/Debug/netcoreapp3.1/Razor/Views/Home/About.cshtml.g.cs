@@ -26,8 +26,15 @@ using AshrafsSweetShop.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\Views\_ViewImports.cshtml"
+using AshrafsSweetShop.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"73725a279d7bcfc0580acf45eff7d3ec45980707", @"/Views/Home/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"758b8ecdd139386a6fd038b30a8a1fb7ab365dd2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d535b1ae10ddffa9c47c3e3367aaba263a1b6104", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -66,7 +73,7 @@ using AshrafsSweetShop.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h1>About us</h1>\r\n<p>We sell all kinds of cool products. Buy from us. Please! Give us your money. Thank you.</p>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "73725a279d7bcfc0580acf45eff7d3ec459807074464", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "73725a279d7bcfc0580acf45eff7d3ec459807074691", async() => {
                 WriteLiteral("Home");
             }
             );

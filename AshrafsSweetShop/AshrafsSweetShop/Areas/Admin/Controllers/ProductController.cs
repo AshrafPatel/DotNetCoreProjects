@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AshrafsSweetShop.Models;
+using AshrafsSweetShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,10 +35,14 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
             else
                 products = _context.Products.Where(p => p.Category.Name == id).OrderBy(p => p.Name).ToList();
 
-            ViewBag.SelectedCategory = id;
-            ViewBag.Categories = categories;
+            var model = new ProductListViewModel
+            {
+                Categories = categories,
+                Products = products,
+                SelectedCategory = id
+            };
 
-            return View(products);
+            return View(model);
         }
 
         [HttpGet]
@@ -46,10 +51,14 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
             var product = new Product();
             product.Category = _context.Categories.Find(1);
 
-            ViewBag.Action = "Add";
-            ViewBag.Categories = categories;
+            var model = new ProductAddUpdateViewModel
+            {
+                Product = product,
+                Categories = categories,
+                Action = "Add"
+            };
 
-            return View("AddUpdate", product);
+            return View("AddUpdate", model);
         }
 
         [HttpGet]
@@ -57,10 +66,14 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
         {
             var product = _context.Products.Include(p => p.Category).First(p => p.ProductID == id);
 
-            ViewBag.Action = "Update";
-            ViewBag.Categories = categories;
+            var model = new ProductAddUpdateViewModel
+            {
+                Product = product,
+                Categories = categories,
+                Action = "Update"
+            };
 
-            return View("AddUpdate", product);
+            return View("AddUpdate", model);
         }
 
         [HttpPost]
@@ -68,18 +81,30 @@ namespace AshrafsSweetShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var userMessage = ""; 
                 if (product.ProductID == 0)
+                {
                     _context.Products.Add(product);
+                    userMessage = "Successfully Added " + product.Name;
+                }
                 else
+                {
                     _context.Products.Update(product);
+                    userMessage = "Successfully Updated " + product.Name;
+                }
                 _context.SaveChanges();
+                TempData["userMessage"] = userMessage;
                 return RedirectToAction("List", "Product");
             }
             else
             {
-                ViewBag.Action = "Save";
-                ViewBag.Categories = categories;
-                return View("AddUpdate");
+                var model = new ProductAddUpdateViewModel
+                {
+                    Product = product,
+                    Categories = categories,
+                    Action = "Save"
+                };
+                return View("AddUpdate", model);
             }
         }
 

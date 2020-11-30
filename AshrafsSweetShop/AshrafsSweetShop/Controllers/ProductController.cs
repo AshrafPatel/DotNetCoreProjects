@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AshrafsSweetShop.Models;
 using Microsoft.EntityFrameworkCore;
+using AshrafsSweetShop.ViewModels;
 
 namespace AshrafsSweetShop.Controllers
 {
@@ -32,15 +33,23 @@ namespace AshrafsSweetShop.Controllers
         public IActionResult List(string id = "All")
         {
             var categories = _context.Categories.OrderBy(c => c.Name).ToList();
-            ViewBag.Categories = categories;
-            ViewBag.SelectedCategory = id;
             List<Product> products;
 
             if (id == "All")
                 products = _context.Products.OrderBy(p => p.Name).ToList();
+            else if (id == "Specials")
+                products = _context.Products.Where(p => p.Price < 5.0M).OrderBy(p => p.Name).ToList();
             else
                 products = _context.Products.Where(p => p.Category.Name == id).OrderBy(p => p.Name).ToList();
-            return View(products);
+
+            var model = new ProductListViewModel
+            {
+                Categories = categories,
+                SelectedCategory = id,
+                Products = products
+            };
+
+            return View(model);
         }
     }
 }

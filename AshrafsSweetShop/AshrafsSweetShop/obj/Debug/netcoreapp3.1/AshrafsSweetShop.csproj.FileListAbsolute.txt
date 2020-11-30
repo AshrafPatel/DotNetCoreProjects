@@ -120,3 +120,8 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweet
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\AddUpdate.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Delete.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\AddUpdate.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\List.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Delete.cshtml.g.cs

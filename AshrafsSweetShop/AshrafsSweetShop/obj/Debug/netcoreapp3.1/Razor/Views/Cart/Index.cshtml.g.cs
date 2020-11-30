@@ -26,8 +26,15 @@ using AshrafsSweetShop.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsSweetShop\AshrafsSweetShop\Views\_ViewImports.cshtml"
+using AshrafsSweetShop.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"88c3bd4320cc0517edb61614862a3aa58ece8803", @"/Views/Cart/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"758b8ecdd139386a6fd038b30a8a1fb7ab365dd2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d535b1ae10ddffa9c47c3e3367aaba263a1b6104", @"/Views/_ViewImports.cshtml")]
     public class Views_Cart_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -4,34 +4,104 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TodoListApp.Models;
+using TodoListApp.ViewModels;
+using Task = TodoListApp.Models.Task;
 
 namespace TodoListApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private TodoContext _context;
+        public HomeController(TodoContext todoContext) => _context = todoContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public IActionResult Index(string id)
         {
-            _logger = logger;
+            var model = new TodoViewModel();
+            model.Filters = new Filters(id);
+            model.Categories = _context.Categories.ToList();
+            model.Statuses = _context.Statuses.ToList();
+            model.DueDateFilters = Filters.DueDateFilterValues;
+
+            IQueryable<Task> query = _context.Tasks.Include(c => c.Category).Include(s => s.Status);
+
+            if (model.Filters.HasCategoryFilter)
+                query = query.Where(t => t.CategoryId == model.Filters.CategoryId);
+
+            if (model.Filters.HasStatusFilter)
+                query = query.Where(t => t.StatusId == model.Filters.StatusId);
+
+            if (model.Filters.HasDueDateFilter)
+            {
+                var today = DateTime.Today;
+
+                if (model.Filters.IsPast)
+                    query = query.Where(t => t.DueDate < today);
+                else if (model.Filters.IsFuture)
+                    query = query.Where(t => t.DueDate > today);
+                else if (model.Filters.IsToday)
+                    query = query.Where(t => t.DueDate == today);
+            }
+
+            var tasks = query.OrderBy(t => t.DueDate).ToList();
+
+            model.Tasks = tasks;
+
+            return View(model);
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Add()
         {
-            return View();
+            var model = new TodoViewModel();
+            model.Categories = _context.Categories.ToList();
+            model.Statuses = _context.Statuses.ToList();
+
+            return View(model);
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Add(TodoViewModel model)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _context.Tasks.Add(model.CurrentTask);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                model.Categories = _context.Categories.ToList();
+                model.Statuses = _context.Statuses.ToList();
+                return View(model);
+            }
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult EditDelete([FromRoute] string id, Task selectedTask)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (selectedTask.StatusId == null)
+                _context.Tasks.Remove(selectedTask);
+            else
+            {
+                string newStatusId = selectedTask.StatusId;
+                selectedTask = _context.Tasks.Find(selectedTask.Id);
+                selectedTask.StatusId = newStatusId;
+                _context.Tasks.Update(selectedTask);
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Home", new { ID = id });
+        }
+
+        [HttpPost]
+        public IActionResult Filter(string[] filters)
+        {
+            string id = string.Join('-', filters);
+            return RedirectToAction("Index", "Home", new { ID = id });
         }
     }
 }

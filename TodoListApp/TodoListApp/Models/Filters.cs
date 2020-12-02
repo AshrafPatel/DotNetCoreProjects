@@ -21,8 +21,8 @@ namespace TodoListApp.Models
         }
 
         public bool HasCategoryFilter => CategoryId.ToLower() != "all";
-        public bool HasDueDateFilter => CategoryId.ToLower() != "all";
-        public bool HasStatusFilter => CategoryId.ToLower() != "all";
+        public bool HasDueDateFilter => DueDate.ToLower() != "all";
+        public bool HasStatusFilter => StatusId.ToLower() != "all";
 
         public static Dictionary<string, string> DueDateFilterValues =>
             new Dictionary<string, string>

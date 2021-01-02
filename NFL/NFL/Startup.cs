@@ -25,7 +25,11 @@ namespace NFL
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRouting(options => { options.AppendTrailingSlash = true; options.LowercaseUrls = true; });
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddNewtonsoftJson();
+
+            services.AddMemoryCache();
+            services.AddSession();
+
             services.AddDbContext<TeamContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("TeamContext")
             ));
@@ -37,6 +41,7 @@ namespace NFL
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
 
+            app.UseSession();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

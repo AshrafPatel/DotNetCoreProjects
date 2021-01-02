@@ -1,8 +1,6 @@
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.csprojAssemblyReference.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.AssemblyInfoInputs.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.AssemblyInfo.cs
-C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.csproj.CoreCompileInputs.cache
-C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.RazorAssemblyInfo.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.RazorAssemblyInfo.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -74,3 +72,7 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.dll
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.pdb
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.genruntimeconfig.cache
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.csproj.CoreCompileInputs.cache
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.MvcApplicationPartsAssemblyInfo.cache

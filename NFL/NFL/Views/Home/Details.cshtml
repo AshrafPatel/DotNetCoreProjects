@@ -22,6 +22,10 @@
                 <a asp-controller="Home" asp-action="Index" asp-route-activeConf="@Model.ActiveConf" asp-route-activeDiv="@Model.ActiveDiv">
                     Return to Home Page
                 </a>
+                <form asp-controller="Home" asp-action="Add">
+                    <button type="submit" class="btn btn-primary">Add To Favourites</button>
+                    <input type="hidden" asp-for="Team.TeamId" />
+                </form>
             </li>
         </ul>
     </div>

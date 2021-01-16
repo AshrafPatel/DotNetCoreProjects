@@ -29,10 +29,10 @@ namespace NFL.Models
         public List<Team> GetMyTeams() => Session.GetObject <List<Team>>(TeamKey) ?? new List<Team>();
         public int? GetMyTeamCount() => Session.GetInt32(CountKey);
 
-        public void SetActiveConf(string conf) => Session.SetString(ConfKey, conf);
+        public void SetActiveConf(string activeConf) => Session.SetString(ConfKey, activeConf);
         public string GetActiveConf() => Session.GetString(ConfKey);
 
-        public void SetActiveDiv(string div) => Session.SetString(DivKey, div);
+        public void SetActiveDiv(string activeDiv) => Session.SetString(DivKey, activeDiv);
         public string GetActiveDiv() => Session.GetString(DivKey);
 
         public void RemoveTeam()

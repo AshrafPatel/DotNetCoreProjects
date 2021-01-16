@@ -74,5 +74,8 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.genruntimeconfig.cache
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.csproj.CoreCompileInputs.cache
-C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\NFL.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\NFL\NFL\obj\Debug\netcoreapp3.1\Razor\Views\Favourites\Index.cshtml.g.cs

@@ -48,6 +48,11 @@ namespace NFL
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    pattern: "{controller=Home}/{action=Index}/conf/{activeConf}/div/{activeDiv}"
+                );
+
+                endpoints.MapControllerRoute(
+                    name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }

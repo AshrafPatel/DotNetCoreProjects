@@ -18,7 +18,7 @@ namespace NFL.Controllers
         {
             _context = teamContext;
         }
-        public IActionResult Index(string activeConf, string activeDiv)
+        public IActionResult Index(string activeConf = "all", string activeDiv = "all")
         {
             var session = new NFLSession(HttpContext.Session);
             session.SetActiveConf(activeConf);
@@ -42,8 +42,8 @@ namespace NFL.Controllers
 
             var model = new TeamListViewModel
             {
-                ActiveConf = (activeConf==null) ? "all" : activeConf,
-                ActiveDiv = (activeDiv==null) ? "all" : activeDiv,
+                ActiveConf = activeConf,
+                ActiveDiv = activeDiv,
                 Conferences = _context.Conferences.ToList(),
                 Divisions = _context.Divisions.ToList()
             };

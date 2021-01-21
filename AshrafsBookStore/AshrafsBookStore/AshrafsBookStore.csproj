@@ -6,8 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\" />
-    <Folder Include="Models\DataLayer\SeedData\" />
-    <Folder Include="Models\DataLayer\Repos\" />
     <Folder Include="Models\DTOs\" />
     <Folder Include="Models\ExtensionMethods\" />
     <Folder Include="ViewModels\" />

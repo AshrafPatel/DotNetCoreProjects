@@ -26,8 +26,8 @@ namespace AshrafsBookStore.Models.DataLayer.Repos
             modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.BookId, ba.AuthorId });
 
             //Set Foreign Keys
-            modelBuilder.Entity<BookAuthor>().HasOne(ba => ba.Book).WithMany(b => b.BookAuthors).HasForeignKey(ba => ba.AuthorId);
-            modelBuilder.Entity<BookAuthor>().HasOne(ba => ba.Author).WithMany(a => a.BookAuthors).HasForeignKey(ba => ba.BookId);
+            modelBuilder.Entity<BookAuthor>().HasOne(ba => ba.Book).WithMany(b => b.BookAuthors).HasForeignKey(ba => ba.BookId);
+            modelBuilder.Entity<BookAuthor>().HasOne(ba => ba.Author).WithMany(b => b.BookAuthors).HasForeignKey(ba => ba.AuthorId);
 
             //Remove Cascading Delete with Genre
             modelBuilder.Entity<Book>().HasOne(b => b.Genre).WithMany(g => g.Books).OnDelete(DeleteBehavior.Restrict);

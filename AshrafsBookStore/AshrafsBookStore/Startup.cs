@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AshrafsBookStore.Models.DataLayer.Repos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +28,10 @@ namespace AshrafsBookStore
             services.AddMemoryCache();
             services.AddSession();
             services.AddControllersWithViews().AddNewtonsoftJson();
+            services.AddDbContext<BookStoreContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("BookStoreContext"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

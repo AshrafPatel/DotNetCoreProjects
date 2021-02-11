@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AshrafsAdvancedSweetShop.Models.Repos;
+using AshrafsAdvancedSweetShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AshrafsAdvancedSweetShop.Controllers
@@ -18,9 +19,20 @@ namespace AshrafsAdvancedSweetShop.Controllers
             _categoryRepository = categoryRepo;
         }
 
-        public ViewResult List()
+        public IActionResult List()
         {
-            return View(_candyRepository.GetAllCandy);
+            var candyListyViewModel = new CandyListViewModel();
+            candyListyViewModel.Candies = _candyRepository.GetAllCandy;
+            candyListyViewModel.CurrentCategory = "BestSellers";
+            return View(candyListyViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var candy = _candyRepository.GetCandyById(id);
+            if (candy == null)
+                return NotFound();
+            return View(candy);
         }
     }
 }

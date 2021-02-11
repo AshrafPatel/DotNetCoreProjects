@@ -7,11 +7,11 @@ namespace AshrafsAdvancedSweetShop.Models.Repos
 {
     public class CategoryRepository : ICategoryRepository
     {
-        public IEnumerable<Category> GetAllCategories => new List<Category>
+        private readonly CandyDbContext _candyDbContext;
+        public CategoryRepository(CandyDbContext candyDbContext)
         {
-            new Category{CategoryId=1,CategoryName="Hard Candy",CategoryDescription = "Awesome and Delicious Hard Candy"},
-            new Category{CategoryId=2,CategoryName="Chocolate Candy",CategoryDescription="Scuptious Chocolate Candy"},
-            new Category{CategoryId=3, CategoryName="Fruit Candy",CategoryDescription="Sweet and Sour Fruit Candy"}
-        };
+            _candyDbContext = candyDbContext;
+        }
+        public IEnumerable<Category> GetAllCategories => _candyDbContext.Categories;
     }
 }

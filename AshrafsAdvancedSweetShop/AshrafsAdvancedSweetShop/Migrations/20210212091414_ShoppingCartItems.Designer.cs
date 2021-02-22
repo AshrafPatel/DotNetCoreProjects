@@ -4,14 +4,16 @@ using AshrafsAdvancedSweetShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AshrafsAdvancedSweetShop.Migrations
 {
     [DbContext(typeof(CandyDbContext))]
-    partial class CandyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210212091414_ShoppingCartItems")]
+    partial class ShoppingCartItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

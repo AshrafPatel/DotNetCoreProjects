@@ -79,3 +79,4 @@ C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsAdvancedSweetShop\Ashr
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsAdvancedSweetShop\AshrafsAdvancedSweetShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsAdvancedSweetShop\AshrafsAdvancedSweetShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CandyCard.cshtml.g.cs
 C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsAdvancedSweetShop\AshrafsAdvancedSweetShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Carousel.cshtml.g.cs
+C:\Users\4shr4\OneDrive\Desktop\DotNetCoreProjects\AshrafsAdvancedSweetShop\AshrafsAdvancedSweetShop\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs

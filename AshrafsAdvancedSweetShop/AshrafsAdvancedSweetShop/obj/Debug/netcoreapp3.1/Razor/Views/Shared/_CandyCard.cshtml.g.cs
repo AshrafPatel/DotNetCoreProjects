@@ -27,7 +27,7 @@ using AshrafsAdvancedSweetShop.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a233b123b235dbd2f9589e82a3703e7ec1a2f3c6", @"/Views/Shared/_CandyCard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5a4d103ac42376cf0bccfb1f4a7308ab1dad7db5", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34e442dcaa0bd22ef87d6bde1be0b2c46b07bd06", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__CandyCard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Candy>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Candy", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
